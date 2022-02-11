@@ -1,0 +1,72 @@
+﻿@model Web.Models.Contact
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <table id="table_of_contacts_id" class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Group</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contact in ViewBag.Contacts)
+            {
+                <tr>
+                    <th scope="row">@contact.Id</th>
+                    <td>@contact.Name</td>
+                    <td>@contact.Email</td>
+                    <td>@contact.Phone</td>
+                    <td>@contact.Group</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <select id="group_id">
+        <option>All</option>
+        <option>Friends</option>
+        <option>Colleagues</option>
+        <option>Relatives</option>
+    </select>
+    <br />
+    <a asp-action="Index">Main page</a>
+    <script>
+        var groupSelect = document.getElementById("group_id");
+        function changeOption() {
+            var selectedOption = groupSelect.options[groupSelect.selectedIndex];
+            $.ajax({
+                url: '/Home/ContactsList?group=' + selectedOption.text,
+                type: 'GET',
+                success: function (data) {
+                    $("#table_of_contacts_id tbody tr").remove();
+                    for (let i = 0; i < data.length; i++) {
+                        $('#table_of_contacts_id > tbody:last-child').append('<tr><th scope="row">'
+                            + data[i].id + '</th><td>'
+                            + data[i].name + '</td><td>'
+                            + data[i].email + '</td><td>'
+                            + data[i].phone + '</td><td>'
+                            + data[i].group + '</td></tr>');
+                    }
+                }
+            });
+        }
+        groupSelect.addEventListener("change", changeOption);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

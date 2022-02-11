@@ -1,0 +1,18 @@
+﻿@model Web.Models.Contact
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ContactForm</title>
+</head>
+<body>
+    <p>@Model.Name is added to contacts list to group @Model.Group </p>
+    @Html.ActionLink("Main page", "Index", "Home");
+    <br />
+    @Html.ActionLink("List of contacts", "ContactsList", "Home");
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+﻿@model Web.Models.Contact
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ContactForm</title>
+</head>
+<body>
+    <form asp-action="FormContact" method="post">
+        <p>
+            <label asp-for="Name">Name:</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Phone:</label>
+            <input asp-for="Phone" />
+        </p>
+        <p>
+            <label>Group:</label>
+            <select asp-for="Group">
+                <option>Friends</option>
+                <option>Colleagues</option>
+                <option>Relatives</option>
+            </select>
+        </p>
+        <button type="submit">Add Contact</button>
+    </form>
+</body>
+</html>
+
