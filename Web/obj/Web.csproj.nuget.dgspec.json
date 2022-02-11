@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stepa\\source\\repos\\Web\\Web\\Web.csproj": {}
+    "D:\\example_github\\Web\\Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stepa\\source\\repos\\Web\\Web\\Web.csproj": {
+    "D:\\example_github\\Web\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stepa\\source\\repos\\Web\\Web\\Web.csproj",
+        "projectUniqueName": "D:\\example_github\\Web\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "C:\\Users\\stepa\\source\\repos\\Web\\Web\\Web.csproj",
+        "projectPath": "D:\\example_github\\Web\\Web.csproj",
         "packagesPath": "C:\\Users\\stepa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stepa\\source\\repos\\Web\\Web\\obj\\",
+        "outputPath": "D:\\example_github\\Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\stepa\\AppData\\Roaming\\NuGet\\NuGet.Config",

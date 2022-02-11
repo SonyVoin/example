@@ -11,6 +11,7 @@ namespace Web.Controllers
 {
     public class HomeController : Controller
     {
+        int a;
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -21,7 +22,7 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Good Moning" : "Good Afternoon";
+            ViewBag.Greeting = hour < 12 ? "Good Moning!" : "Good Afternoon!";
             return View();
         }
         [HttpGet]

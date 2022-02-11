@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oOHlPDRqeRK4PTRK+hyu5oRg6BaZOzc4cIB9DbtypivrAX8F3ESLkDBjGLabs6PDEm+8rYQr3F7skBDnDEZjqw==",
+  "dgSpecHash": "+zC/r8gAwVPBHR0HMBgLizZHbmP5hT68vm5Y06jdQlofbzVVrbB62egMHAjI5uslolhxKntGq2S3JVrBeLZpRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stepa\\source\\repos\\Web\\Web\\Web.csproj",
+  "projectFilePath": "D:\\example_github\\Web\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stepa\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\stepa\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19249.1\\microsoft.data.sqlclient.1.0.19249.1.nupkg.sha512",
